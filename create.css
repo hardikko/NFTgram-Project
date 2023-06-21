@@ -1,0 +1,404 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    /* display: grid;
+    place-items: center; */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #111;
+    padding-bottom: 2rem;
+}
+nav img{
+    width: 40px;
+    height: 40px;
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-links li{
+    list-style-type: none;
+    margin: 0 1rem;
+
+}
+.searchbar{
+    position: relative;
+    min-width: 250px;
+}
+.searchbar input{
+border: none;
+outline: none;
+border-radius: 20px;
+padding: 0.5rem 1rem 0.5rem 2rem;
+background-color: #222;
+color: #fff;
+width: 100%;
+letter-spacing: 0.5px;
+}
+.searchbar h5{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    padding: 0 0.5rem;
+    color: #eee;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.btn{
+    padding: 0.5rem  1rem;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-buttons .dark-mode{
+    width: 32px;
+    height: 32px;
+    background-color: #111;
+    border: 1px solid #222;
+    margin-right: 1rem;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    transition: 1s;
+
+    cursor: pointer;
+    
+}
+
+.dark-mode i{
+    position: absolute;
+padding: 0.5rem;
+color: #aaa;
+}
+
+.dark-mode:hover i{
+    color: white;
+}
+
+
+
+
+.nav-buttons #signin-btn{
+    color: white;
+
+    background: #111;
+    border: 1px solid #333;
+    transition: 1s;
+    display: none;
+    
+
+
+}
+.nav-buttons #signin-btn:hover{
+    border: 2px solid #8e15ffff ;
+}
+
+
+.nav-buttons #create-btn{
+    color: #aaa;
+    margin-right: 1rem;
+    transition: 1s;
+
+    /* background-image: linear-gradient(to right ,#8e15ffff,#6d80ffff); */
+    background-color: #111;
+    pointer-events: none;
+    display: none;
+}
+
+
+
+.nav-links li{
+    text-decoration: none;
+    list-style-type: none;
+    color: #bbb;
+    transition: 0.5s;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    /* border-bottom: 2px solid #111; */
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+.nav-links li a{
+    color: #aaa;
+    text-decoration: none;
+}
+.nav-links li a:hover{
+    color: white;
+    text-decoration: none;
+}
+.nav-links li::before{
+content: " ";
+ width: 0%;
+ opacity: 0;
+ height: 2px;
+ background-color: #8e15ffff;
+ position: absolute;
+ border-radius: 5px;
+ top: 24px;
+ transition: 0.5s;
+ 
+
+}
+
+.nav-links li:hover::before {
+    width: 80%;
+    opacity: 1;
+    
+}
+
+
+.nav-links li:hover{
+/* border-bottom: 2px solid #8e15ffff ; */
+color: #fff;
+transform: scale(1.1);
+    
+}
+
+.title-box{
+    width: 100%;
+   display: grid;
+   place-items: center;
+    height: 10vh;
+}
+
+.title{
+    color: white;
+   width: fit-content;
+    font-size: 2rem;
+    font-weight: 600;
+    /* margin-left: 1.5rem; */
+    margin-top:-1.6rem;
+    /* background-image: linear-gradient(to right ,#8e15ffff,#6d80ffff); */
+   
+    /* -webkit-text-fill-color: transparent; */
+
+}
+
+
+
+/* ====================================== */
+.file{
+    background-color: #111;
+    border: 2px solid #444;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    /* height: calc(100vh - 60px - 0.5rem); */
+    height: 76vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column-reverse; */
+    padding: 0rem 1.5rem;
+    /* background-color: red; */
+
+
+    
+}
+
+
+.text-area{
+    height: 100%;
+    background-color: #111;
+    flex: 1;
+/* background-color: red; */
+   
+    border-radius: 20px;
+
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.desc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.desc textarea{
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #222;
+    padding: 1rem;
+    color: #ccc;
+
+    border: none;
+    outline: none;
+    max-width: 650px;
+    max-height: 200px;
+}
+.desc input{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #222;
+    padding: 1rem;
+    color: #ccc;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    
+}
+
+.create{
+    width: 100%;
+}
+.text-area .create button{
+    color: #fff;
+    margin-right: 1rem;
+    transition: 1s;
+    width: 100%;
+
+    outline: none;
+    border: none;
+
+    background-image: linear-gradient(to right ,rgb(132, 0, 255),rgb(60, 86, 255));
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.8rem;
+   
+}
+
+
+
+
+
+
+/* =============== drag ================= */
+
+.drag-area{
+    height: 100%;
+    position: relative;
+  
+}
+.cancel-img{
+    background-color: #111;
+    border: 2px solid #444;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+.img-area{
+    flex: 1;
+    height: 100%;
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: #111;
+    border-radius: 20px;
+}
+#file{
+    margin-top: 1rem;
+}
+.drag-area{
+    border: 2px dashed #444;
+   width: 100%;
+   height: 65vh;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #111;
+
+
+
+    border-radius: 20px;
+    /* padding: 1rem; */
+
+  }
+  .drag-area.active{
+    border: 2px solid #fff;
+  }
+  .drag-area .icon{
+    font-size: 3rem;
+    color: #bbb;
+  }
+  .drag-area header{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #bbb;
+  }
+  .drag-area span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #bbb;
+    margin: 10px 0 15px 0;
+  }
+  .drag-area button{
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: 0.5s;
+  }
+  .drag-area button:hover{
+    border: 1px solid #fff;
+    transform: scale(1.1);
+  }
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }

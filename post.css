@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+body{
+    background-color: #8F00FF;
+
+}
+
+.nav-bar{
+    background-color: #000;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(201, 196, 196);
+   
+
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #161515;
+}
+.user-info h4{
+    margin-left: 1rem;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+
+   
+    
